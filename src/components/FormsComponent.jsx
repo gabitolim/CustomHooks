@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "../hooks/useForm";
 
-export const FormsApp = () => {
+export const FormsComponent = () => {
 	const initialForm = {
 		username: "",
 		email: "",
@@ -18,6 +18,12 @@ export const FormsApp = () => {
 		setShowComponent(true);
 	};
 
+	const focusRef = useRef();
+
+	useEffect(() => {
+		focusRef.current.focus();
+	}, []);
+
 	return (
 		<>
 			{!showComponent ? (
@@ -27,6 +33,7 @@ export const FormsApp = () => {
 							Username
 						</label>
 						<input
+							ref={focusRef}
 							type="username"
 							className="form-control"
 							id="username"

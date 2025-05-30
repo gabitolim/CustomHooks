@@ -1,17 +1,23 @@
-import { FetchApp } from "./components/FetchApp";
-import { FormsApp } from "./components/FormsApp";
-import { CounterApp } from "./components/CounterApp";
+import { CalculoPesadoComponent } from "./components/CalculoPesadoComponent";
+import { CallBackComponent } from "./components/CallBackComponent";
+import { CounterComponent } from "./components/CounterComponent";
+import { FetchComponent } from "./components/FetchComponent";
+import { FormsComponent } from "./components/FormsComponent";
 
 export const HooksApp = () => {
 	return (
 		<>
 			<h1>Aplication of HooksApp</h1>
 			<hr />
-			<FetchApp />
+			<FetchComponent />
 			<hr />
-			<FormsApp />
+			<CounterComponent />
 			<hr />
-			<CounterApp />
+			<FormsComponent />
+			<hr />
+			<CalculoPesadoComponent />
+			<hr />
+			<CallBackComponent />
 		</>
 	);
 };

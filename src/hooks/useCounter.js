@@ -7,6 +7,8 @@ export const useCounter = (initialValue = 0) => {
 		setCounter((c) => c + value);
 	};
 
+	const allowNegative = initialValue < 0;
+
 	const decrement = (value = 1) => {
 		if (!allowNegative && counter <= 0) return;
 		setCounter((c) => c - value);
