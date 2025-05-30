@@ -52,6 +52,7 @@ export const TaskListComponent = () => {
 			type: "End Task",
 			payload: id,
 		};
+		dispatch(action);
 	};
 
 	const { task, onInputChange } = useForm({ task: "" });
